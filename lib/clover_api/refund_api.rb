@@ -1,3 +1,5 @@
+require 'json'
+require 'net/http'
 
 module Cloverapi
   class RefundApi

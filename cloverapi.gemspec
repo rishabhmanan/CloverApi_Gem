@@ -1,4 +1,4 @@
-require File.expand_path('lib/cloverapi/version', __dir__)
+require File.expand_path('lib/clover_api/version', __dir__)
 
 Gem::Specification.new do |spec|
   spec.name                  = 'cloverapi'

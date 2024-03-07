@@ -1,3 +1,6 @@
+require 'json'
+require 'net/http'
+require 'time'
 
 module Cloverapi
   class PaymentAndFeesApi
