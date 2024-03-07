@@ -26,6 +26,7 @@ module Cloverapi
     def calculate_total_tips(start_time, end_time)
       response = get_tips(start_time, end_time)
       total_tips = 0
+
       if response
         response.each do |tip|
           total_tips += tip['flatTip'].to_f if tip['flatTip']
@@ -33,7 +34,10 @@ module Cloverapi
       else
         puts "No data available for processing"
       end
+
+      total_tips
     end
+
     private
 
     def send_get_request(uri)
