@@ -1,0 +1,79 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-rake
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.5.0
+
+Layout/LineLength:
+  Max: 200
+
+Style/GuardClause:
+  Enabled: false
+
+# https://github.com/rubocop/rubocop/issues/9853
+Style/ExplicitBlockArgument:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/RedundantFetchBlock:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/WordArray:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Lint/SymbolConversion:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Max: 20
+
+Metrics/PerceivedComplexity:
+  Max: 20
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/LambdaCall:
+  Enabled: false
+
+Style/QuotedSymbols:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: false
+
+# https://stackoverflow.com/a/67149191
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/IndexedLet:
+  Enabled: false
