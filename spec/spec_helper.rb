@@ -1,4 +1,3 @@
-
 require 'dotenv/load'
 require "clover_api/discount_api"
 require "clover_api/payment_and_fees_api"

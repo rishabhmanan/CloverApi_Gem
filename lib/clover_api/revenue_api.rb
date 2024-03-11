@@ -19,7 +19,7 @@ module Cloverapi
       end_time_ms = end_time.to_i * 1000
       uri = URI("#{BASE_URI}/#{@merchant_id}/orders?filter=createdTime>=#{start_time_ms}&filter=createdTime<=#{end_time_ms}")
       response = send_get_request(uri)
-      return JSON.parse(response.body)["elements"] || []
+      JSON.parse(response.body)["elements"] || []
     end
 
     def get_line_items_for_orders(orders)
@@ -85,8 +85,7 @@ module Cloverapi
       http.use_ssl = true
       request = Net::HTTP::Get.new(uri)
       @headers.each { |key, value| request[key] = value }
-      response = http.request(request)
-      response
+      http.request(request)
     end
   end
 end

@@ -1,13 +1,13 @@
-require 'spec_helper'
-require 'clover_api/refund_api'
-require 'net/http'
+require "spec_helper"
+require "clover_api/refund_api"
+require "net/http"
 
 RSpec.describe Cloverapi::RefundApi do
-  let(:api_token) { ENV['API_TOKEN'] }
-  let(:merchant_id) { ENV['MERCHANT_ID'] }
+  let(:api_token) { ENV["API_TOKEN"] }
+  let(:merchant_id) { ENV["MERCHANT_ID"] }
 
-  describe '#get_orders' do
-    it 'returns orders within specified time range' do
+  describe "#get_orders" do
+    it "returns orders within specified time range" do
       start_time = Time.now - 3600
       end_time = Time.now
       refund_api = described_class.new(api_token, merchant_id)
@@ -16,8 +16,8 @@ RSpec.describe Cloverapi::RefundApi do
     end
   end
 
-  describe '#calculate_total_refunds' do
-    it 'calculates total refunds within specified time range' do
+  describe "#calculate_total_refunds" do
+    it "calculates total refunds within specified time range" do
       start_time = Time.now - 3600
       end_time = Time.now
       refund_api = described_class.new(api_token, merchant_id)

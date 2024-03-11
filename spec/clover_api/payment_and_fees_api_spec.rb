@@ -1,13 +1,13 @@
-require 'spec_helper'
-require 'clover_api/payment_and_fees_api'
-require 'net/http'
+require "spec_helper"
+require "clover_api/payment_and_fees_api"
+require "net/http"
 
 RSpec.describe Cloverapi::PaymentAndFeesApi do
-  let(:api_token) { ENV['API_TOKEN'] }
-  let(:merchant_id) { ENV['MERCHANT_ID'] }
+  let(:api_token) { ENV["API_TOKEN"] }
+  let(:merchant_id) { ENV["MERCHANT_ID"] }
 
-  describe '#get_payments_in_period' do
-    it 'returns payments within specified time range' do
+  describe "#get_payments_in_period" do
+    it "returns payments within specified time range" do
       start_time = Time.now - 3600
       end_time = Time.now
       payment_api = described_class.new(api_token, merchant_id)
@@ -17,8 +17,8 @@ RSpec.describe Cloverapi::PaymentAndFeesApi do
     end
   end
 
-  describe '#calculate_revenue_per_processor' do
-    it 'calculates revenue per processor within specified time range' do
+  describe "#calculate_revenue_per_processor" do
+    it "calculates revenue per processor within specified time range" do
       start_time = Time.now - 3600
       end_time = Time.now
       payment_api = described_class.new(api_token, merchant_id)
@@ -28,8 +28,8 @@ RSpec.describe Cloverapi::PaymentAndFeesApi do
     end
   end
 
-  describe '#calculate_processor_fees' do
-    it 'calculates processor fees within specified time range' do
+  describe "#calculate_processor_fees" do
+    it "calculates processor fees within specified time range" do
       start_time = Time.now - 3600
       end_time = Time.now
       payment_api = described_class.new(api_token, merchant_id)

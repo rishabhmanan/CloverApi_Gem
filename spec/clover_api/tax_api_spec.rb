@@ -24,8 +24,8 @@ RSpec.describe Cloverapi::TaxApi do
       total_taxes = tax_api.calculate_total_taxes(start_time, end_time)
 
       expected_total_taxes = [
-        { "id" => "DESTJXFKP7YT8", "name" => "Second Tax", "taxType" => "VAT_TAXABLE", "rate" => 2000, "isDefault" => false },
-        { "id" => "21V42JY1XA9SC", "name" => "Test Tax", "rate" => 345000, "isDefault" => true },
+        { "id" => "DESTJXFKP7YT8", "name" => "Second Tax", "taxType" => "VAT_TAXABLE", "rate" => 2_000, "isDefault" => false },
+        { "id" => "21V42JY1XA9SC", "name" => "Test Tax", "rate" => 345_000, "isDefault" => true },
         { "id" => "0WDCNCBYVXBVM", "name" => "NO_TAX_APPLIED", "rate" => 0, "isDefault" => false },
       ].sum { |tax| tax["rate"].to_f }
 

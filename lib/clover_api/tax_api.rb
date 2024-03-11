@@ -61,6 +61,5 @@ module Cloverapi
       puts "Error occurred while handling response: #{e.message}"
       raise
     end
-
   end
 end

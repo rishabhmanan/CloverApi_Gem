@@ -1,14 +1,13 @@
-
-require 'clover_api/discount_api'
-require 'spec_helper'
-require 'net/http'
+require "clover_api/discount_api"
+require "spec_helper"
+require "net/http"
 
 RSpec.describe Cloverapi::DiscountApi do
-  let(:api_token) { ENV['API_TOKEN'] }
-  let(:merchant_id) { ENV['MERCHANT_ID'] }
+  let(:api_token) { ENV["API_TOKEN"] }
+  let(:merchant_id) { ENV["MERCHANT_ID"] }
 
-  describe '#get_discount' do
-    it 'returns discounts within specified time range' do
+  describe "#get_discount" do
+    it "returns discounts within specified time range" do
       start_time = Time.now - 3600
       end_time = Time.now
       discount_api = described_class.new(api_token, merchant_id)
@@ -17,8 +16,8 @@ RSpec.describe Cloverapi::DiscountApi do
     end
   end
 
-  describe '#calculate_total_discounts' do
-    it 'calculates total discounts within specified time range' do
+  describe "#calculate_total_discounts" do
+    it "calculates total discounts within specified time range" do
       start_time = Time.now - 3600
       end_time = Time.now
       discount_api = described_class.new(api_token, merchant_id)

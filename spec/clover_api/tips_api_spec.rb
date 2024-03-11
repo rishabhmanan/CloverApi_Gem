@@ -1,13 +1,13 @@
-require 'spec_helper'
-require 'clover_api/tips_api'
+require "spec_helper"
+require "clover_api/tips_api"
 require "net/http"
 
 RSpec.describe Cloverapi::TipsApi do
-  let(:api_token) { ENV['API_TOKEN'] }
-  let(:merchant_id) { ENV['MERCHANT_ID'] }
+  let(:api_token) { ENV["API_TOKEN"] }
+  let(:merchant_id) { ENV["MERCHANT_ID"] }
 
-  describe '#get_tips' do
-    it 'returns tips within specified time range' do
+  describe "#get_tips" do
+    it "returns tips within specified time range" do
       start_time = Time.now - 3600
       end_time = Time.now
       tips_api = described_class.new(api_token, merchant_id)
@@ -16,8 +16,8 @@ RSpec.describe Cloverapi::TipsApi do
     end
   end
 
-  describe '#calculate_total_tips' do
-    it 'calculates total tips within specified time range' do
+  describe "#calculate_total_tips" do
+    it "calculates total tips within specified time range" do
       start_time = Time.now - 3600
       end_time = Time.now
       tips_api = described_class.new(api_token, merchant_id)
